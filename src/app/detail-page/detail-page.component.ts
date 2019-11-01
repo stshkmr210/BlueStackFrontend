@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
-  public ApplicationData = {};
+  public ApplicationData ;
 
   getAppDetails(appId): void {
     this.http.get<any>(`${environment.apiUrl}/web/get-detailed-data?id=${appId}`).subscribe(data => {
