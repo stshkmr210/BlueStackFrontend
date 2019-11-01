@@ -25,20 +25,20 @@
                    </span>
                 </span>
               <div class="wXUyZd">
-                <a href="{{category.appUrl}}" aria-hidden="true" tabindex="-1" class="poRVub"></a>
+                <a href="/app-details?id={{category.appId}}" aria-hidden="true" tabindex="-1" class="poRVub"></a>
               </div>
             </div>
           </div>
           <div class="RZEgze">
             <div class="vU6FJ p63iDd">
-              <a href="{{category.appUrl}}" aria-hidden="true" tabindex="-1" class="JC71ub"></a>
+              <a href="/app-details?id={{category.appId}}" aria-hidden="true" tabindex="-1" class="JC71ub"></a>
               <div class="k6AFYd">
                 <div class="bQVA0c">
                   <div class="PODJt">
                     <div class="kCSSQe">
                       <div class="b8cIId ReQCgd Q9MA7b">
-                        <a href="{{category.appUrl}}">
-                          <div class="WsMG1c nnK0zc" title="Digital Wellbeing">{{category.appName}}</div>
+                        <a href="/app-details?id={{category.appId}}">
+                          <div class="WsMG1c nnK0zc" title="Digital Wellbeing" [innerHtml] ="category.appName"></div>
                         </a>
                         <div class="cqtbn"></div>
                       </div>
@@ -47,6 +47,15 @@
                           <div class="KoLSrc">{{category.appDevName}}</div>
                         </a>
                         <div class="cqtbn"></div>
+                      </div>
+                      <div *ngIf="category.cost" class="zYPPle">
+                        <div jsname="zVnJac">
+                            <div class="LCATme">
+                              <span class="VfPpfd ZdBevf i5DZme">
+                                <span>₹{{category.cost}}</span>
+                              </span>
+                            </div>
+                        </div>
                       </div>
                     </div>
                   </div>

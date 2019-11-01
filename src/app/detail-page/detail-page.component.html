@@ -1,0 +1,84 @@
+<div class="JNury Ekdcne" style="margin-left: 134px;width: 79%;">
+  <div class="LXrl4c">
+    <div class="oQ6oV">
+      <div class="hkhL9e" style="width: 50px">
+        <div class="xSyT2c" style="width: 91px;">
+          <img src="{{ApplicationData.imageUrl}}=s180-rw" class="T75of sHb2Xb">
+        </div>
+      </div>
+      <div class="D0ZKYe">
+        <div class="rlnrKc">
+          <div class="sIskre">
+            <h1 class="AHFaub">
+              <span [innerHtml] = "ApplicationData.appName"></span>
+            </h1>
+            <div class="jdjqLd">
+              <div class="ZVWMWc">
+                <div class="qQKdcc">
+                  <span class="T32cc UAO9ie">
+                    <a href="{{ApplicationData.appDevUrl}}" class="hrTbp R8zArc">{{ApplicationData.appDevName}}</a>
+                  </span>
+                  <span class="T32cc UAO9ie">
+                    <a class="hrTbp R8zArc">{{ApplicationData.appCatogery}}</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Rx5dXb">
+      <div class="awJjId nmBghe">
+        <div class="gIyxRc"></div>
+      </div>
+      <div class="JiLaSd u3EI9e" style="width: 960px;">
+        <div class="SgoUSc">
+           <div *ngFor="let videoObj of ApplicationData.videoJson" class="MSLVtf Q4vdJd">
+            <img src="{{videoObj.imageUrl}}" class="T75of DYfLw">
+            <div class="TdqJUe">
+              <a  class="MMZjL lgooh" href="{{videoObj.videoUrl}}" target="_blank">
+              </a>
+            </div>
+          </div>
+          <button *ngFor="let imageObj of ApplicationData.imageJson" class="Q4vdJd">
+            <img src="{{imageObj.imageUrl}}=w720-h310-rw"  class="T75of DYfLw">
+          </button>
+        </div>
+      </div>
+      <div class="awJjId nmBghe">
+        <div class="juegYd"></div>
+      </div>
+    </div>
+
+    <div class="W4P4ne ">
+      <div class="wSaTQd">
+        <h2 class="Rm6Gwb">Additional Information</h2>
+      </div>
+      <div class="JHTxhe IQ1z0d">
+        <div class="IxB2fe">
+          <div *ngFor="let metaDat of ApplicationData.metaData" class="hAyfc">
+            <div class="BgcNfc" *ngFor="let item of metaDat | keyvalue" >{{item.key}}</div>
+            <span class="htlgb">
+              <div class="IQ1z0d"><span class="htlgb" *ngFor="let item of metaDat | keyvalue" [innerHTML]="item.value"></span></div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="JHTxhe IQ1z0d">
+      <div class="W4P4ne ">
+        <div class="wSaTQd"></div>
+        <div class="PHBdkd">
+          <div class="DWPxHb" style="max-height: 144px;">
+             <span>
+               <div jsname="sngebd" [innerHTML]="ApplicationData.description"></div>
+             </span>
+            <div jsname="WgKync" class="uwAgLc f3Fr9d qAWA2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
