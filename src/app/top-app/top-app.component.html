@@ -1,0 +1,61 @@
+<button class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="reScrap()" style="position: absolute;top: 31px;right: 28px;">Reload</button>
+<div  *ngIf="noDataBool" class="xwY9Zc">
+  <h1>NO Data Found</h1>
+</div>
+<div  *ngFor="let categoryData of ApplicationData | keyvalue" class="Ktdaqe" style="margin-left:127px">
+  <div  class="Z3lOXb">
+    <div class="xwY9Zc">
+      <h2 class="sv0AUd bs3Xnd">{{categoryData.value[0].appCatogery}}</h2>
+    </div>
+    <div class="W9yFB"  style="margin-right: 162px;">
+      <button *ngIf="showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showLess()">Show less</button>
+      <button *ngIf="!showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showMore()">Show more</button>
+    </div>
+  </div>
+  <div class="ZmHEEd  fLyRuc">
+    <div *ngFor="let category of categoryData.value  let i = index" class="WHE7ib mpg5gc">
+      <div *ngIf="i < maxObjectShow" class="uMConb  V2Vq5e POHYmb-eyJpod YEDFMc-eyJpod y1APZe-eyJpod drrice">
+        <div class="Vpfmgd">
+          <div class="uzcko">
+            <div class="N9c7d eJxoSc">
+                <span class="ZYyTud K3IMke buPxGf" style="height: 160px;width: 160px">
+                   <span>
+                     <img class="T75of QNCnCf" aria-hidden="true" style="max-height: 128px;max-width: 128px;height: 128px"
+                          src="{{category.imageUrl}}">
+                   </span>
+                </span>
+              <div class="wXUyZd">
+                <a href="{{category.appUrl}}" aria-hidden="true" tabindex="-1" class="poRVub"></a>
+              </div>
+            </div>
+          </div>
+          <div class="RZEgze">
+            <div class="vU6FJ p63iDd">
+              <a href="{{category.appUrl}}" aria-hidden="true" tabindex="-1" class="JC71ub"></a>
+              <div class="k6AFYd">
+                <div class="bQVA0c">
+                  <div class="PODJt">
+                    <div class="kCSSQe">
+                      <div class="b8cIId ReQCgd Q9MA7b">
+                        <a href="{{category.appUrl}}">
+                          <div class="WsMG1c nnK0zc" title="Digital Wellbeing">{{category.appName}}</div>
+                        </a>
+                        <div class="cqtbn"></div>
+                      </div>
+                      <div class="b8cIId ReQCgd KoLSrc">
+                        <a href="{{category.appDevUrl}}" class="mnKHRc">
+                          <div class="KoLSrc">{{category.appDevName}}</div>
+                        </a>
+                        <div class="cqtbn"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
