@@ -1,3 +1,27 @@
+.loader-body{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgba(162, 162, 162, 0.90);
+  z-index: 1000000;
+}
+
+.loader img{
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+.hide{
+  display: none !important;
+}
+
+
 .header-fixed {
   background-color:#292c2f;
   box-shadow:0 1px 1px #ccc;
