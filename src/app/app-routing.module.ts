@@ -6,6 +6,7 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 
 const routes: Routes = [
   { path : 'top', component : TopAppComponent },
+  { path : '', component : TopAppComponent },
   { path : 'app-details', component : DetailPageComponent }
   ];
 
