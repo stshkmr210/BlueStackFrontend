@@ -25,11 +25,11 @@ export class DetailPageComponent implements OnInit {
     });
   }
   public scrollLeft(el: HTMLElement): void {
-    el.scrollLeft -= 20;
+    el.scrollLeft -= 30;
   }
 
   public scrollRight(el: HTMLElement): void {
-    el.scrollLeft += 20;
+    el.scrollLeft += 30;
   }
   public showImageDiv(url: any): void {
    this.showimageUrl = url;

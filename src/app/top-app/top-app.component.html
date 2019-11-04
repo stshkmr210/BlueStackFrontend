@@ -1,6 +1,9 @@
 <div class="loader-body" *ngIf="showLoaded">
   <div class="loader"><img src="assets/images/home_page_loader.gif" alt="loader"></div>
 </div>
+<!--<button class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="reScrap()" style="position: absolute;top: 31px;right: 118px;">Reload</button>-->
+<button *ngIf="showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" style="position: absolute;top: 31px;right: 118px;" (click)="showLess()" >Show less</button>
+<button *ngIf="!showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" style="position: absolute;top: 31px;right: 118px;" (click)="showMore()">Show more</button>
 <button class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="reScrap()" style="position: absolute;top: 31px;right: 28px;">Reload</button>
 <div  *ngIf="noDataBool" class="xwY9Zc">
   <h1>NO Data Found</h1>
@@ -10,10 +13,10 @@
     <div class="xwY9Zc">
       <h2 class="sv0AUd bs3Xnd">{{categoryData.value[0].appCatogery}}</h2>
     </div>
-    <div class="W9yFB"  style="margin-right: 162px;">
-      <button *ngIf="showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showLess()" style="margin-right: 11px;">Show less</button>
-      <button *ngIf="!showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showMore()" style="margin-right: 11px;">Show more</button>
-    </div>
+    <!--<div class="W9yFB">-->
+      <!--<button *ngIf="showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showLess()" >Show less</button>-->
+      <!--<button *ngIf="!showMoreBool" class="LkLjZd ScJHi U8Ww7d xjAeve nMZKrb" (click)="showMore()">Show more</button>-->
+    <!--</div>-->
   </div>
   <div class="ZmHEEd  fLyRuc">
     <div *ngFor="let category of categoryData.value  let i = index" class="WHE7ib mpg5gc">
@@ -21,7 +24,19 @@
         <div class="Vpfmgd">
           <div class="uzcko">
             <div class="N9c7d eJxoSc">
-                <span class="ZYyTud K3IMke buPxGf" style="height: 160px;width: 160px">
+              <span class="yNWQ8e K3IMke buPxGf" style="height: 160px;width: 160px">
+                   <span>
+                     <img class="T75of QNCnCf" aria-hidden="true" style="max-height: 128px;max-width: 128px;height: 128px"
+                          src="{{category.imageUrl}}">
+                   </span>
+                </span>
+              <span class="ZYyTud K3IMke buPxGf" style="height: 160px;width: 160px">
+                   <span>
+                     <img class="T75of QNCnCf" aria-hidden="true" style="max-height: 128px;max-width: 128px;height: 128px"
+                          src="{{category.imageUrl}}">
+                   </span>
+                </span>
+                <span class="kJ9uy K3IMke buPxGf" style="height: 160px;width: 160px">
                    <span>
                      <img class="T75of QNCnCf" aria-hidden="true" style="max-height: 128px;max-width: 128px;height: 128px"
                           src="{{category.imageUrl}}">

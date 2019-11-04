@@ -1,90 +1,109 @@
 <div class="loader-body" *ngIf="showLoaded">
   <div class="loader"><img src="assets/images/home_page_loader.gif" alt="loader"></div>
 </div>
-<div class="JNury Ekdcne" style="margin-left: 134px;width: 79%;" *ngIf="ApplicationData">
-  <div class="LXrl4c">
-    <div class="oQ6oV">
-      <div class="hkhL9e" style="width: 50px">
-        <div class="xSyT2c" style="width: 91px;">
-          <img src="{{ApplicationData.imageUrl}}=s180-rw" class="T75of sHb2Xb">
-        </div>
-      </div>
-      <div class="D0ZKYe">
-        <div class="rlnrKc">
-          <div class="sIskre">
-            <h1 class="AHFaub">
-              <span [innerHtml] = "ApplicationData.appName"></span>
-            </h1>
-            <div class="jdjqLd">
-              <div class="ZVWMWc">
-                <div class="qQKdcc">
+
+<div class="T4LgNb">
+  <div class="VjFXz"></div>
+  <div class="ZfcPIb">
+    <div class="UTg3hd">
+      <div class="JNury Ekdcne" *ngIf="ApplicationData">
+        <div class="LXrl4c">
+          <div class="oQ6oV">
+            <div class="hkhL9e" style="width: 221px;">
+              <div class="xSyT2c">
+                <img src="{{ApplicationData.imageUrl}}=s180-rw" class="T75of sHb2Xb" >
+              </div>
+            </div>
+
+            <div class="D0ZKYe">
+              <div class="rlnrKc">
+                <div class="sIskre">
+                  <h1 class="AHFaub">
+                    <span [innerHtml] = "ApplicationData.appName"></span>
+                  </h1>
+                  <div class="jdjqLd">
+                    <div class="ZVWMWc">
+                      <div class="qQKdcc">
                   <span class="T32cc UAO9ie">
                     <a href="{{ApplicationData.appDevUrl}}" class="hrTbp R8zArc">{{ApplicationData.appDevName}}</a>
                   </span>
-                  <span class="T32cc UAO9ie">
+                        <span class="T32cc UAO9ie">
                     <a class="hrTbp R8zArc">{{ApplicationData.appCatogery}}</a>
                   </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="Rx5dXb">
-      <div class="awJjId nmBghe">
-        <div class="gIyxRc" (click)="scrollLeft(target)"></div>
-      </div>
-      <div #target class="JiLaSd u3EI9e" style="width: 960px;height: 364px;overflow-x: scroll;">
-        <div class="SgoUSc">
-           <div *ngFor="let videoObj of ApplicationData.videoJson" class="MSLVtf Q4vdJd">
-            <img src="{{videoObj.imageUrl}}" class="T75of DYfLw">
-            <div class="TdqJUe">
-              <a  class="MMZjL lgooh" href="{{videoObj.videoUrl}}" target="_blank">
-              </a>
+          <div class="Rx5dXb">
+            <div class="awJjId nmBghe">
+              <div class="gIyxRc" (click)="scrollLeft(target)"></div>
+            </div>
+            <div class="JiLaSd u3EI9e">
+              <div #target class="SgoUSc" style="overflow-x: scroll;">
+                <div *ngFor="let videoObj of ApplicationData.videoJson" class="MSLVtf Q4vdJd">
+                  <img src="{{videoObj.imageUrl}}" class="T75of DYfLw">
+                  <div class="TdqJUe">
+                    <a  class="MMZjL lgooh" href="{{videoObj.videoUrl}}" target="_blank">
+                    </a>
+                  </div>
+                </div>
+                <button *ngFor="let imageObj of ApplicationData.imageJson" (click)="showImageDiv(imageObj.imageUrl)" class="Q4vdJd">
+                  <img src="{{imageObj.imageUrl}}=w720-h310-rw"  class="T75of DYfLw">
+                </button>
+              </div>
+            </div>
+            <div class="awJjId nmBghe">
+              <div class="juegYd" (click)="scrollRight(target)"></div>
             </div>
           </div>
-          <button *ngFor="let imageObj of ApplicationData.imageJson" (click)="showImageDiv(imageObj.imageUrl)" class="Q4vdJd">
-            <img src="{{imageObj.imageUrl}}=w720-h310-rw"  class="T75of DYfLw">
-          </button>
-        </div>
-      </div>
-      <div class="awJjId nmBghe">
-        <div class="juegYd" (click)="scrollRight(target)"></div>
-      </div>
-    </div>
-
-    <div class="W4P4ne ">
-      <div class="wSaTQd">
-        <h2 class="Rm6Gwb">Additional Information</h2>
-      </div>
-      <div class="JHTxhe IQ1z0d">
-        <div class="IxB2fe">
-          <div *ngFor="let metaDat of ApplicationData.metaData" class="hAyfc">
-            <div class="BgcNfc" *ngFor="let item of metaDat | keyvalue" >{{item.key}}</div>
-            <span class="htlgb">
-              <div class="IQ1z0d"><span class="htlgb" *ngFor="let item of metaDat | keyvalue" [innerHTML]="item.value"></span></div>
-            </span>
+          <!--description start-->
+          <div class="JHTxhe IQ1z0d">
+            <div class="W4P4ne ">
+              <div class="wSaTQd"></div>
+              <h2 aria-label="Description"></h2>
+              <div jscontroller="IsfMIf" jsaction="rcuQ6b:npT2md" class="PHBdkd" data-content-height="144" jsshadow="">
+                <div jsname="bN97Pc" class="DWPxHb" itemprop="description" style="max-height: none;">
+                  <span jsslot="">
+                    <div jsname="sngebd" [innerHTML]="ApplicationData.description"></div>
+                  </span>
+                  <div jsname="WgKync" class="uwAgLc f3Fr9d"></div>
+                </div>
+              </div>
+            </div>
+            <div class="Njo8s"></div>
           </div>
-        </div>
-      </div>
-    </div>
+          <!--description end-->
 
-    <div class="JHTxhe IQ1z0d">
-      <div class="W4P4ne ">
-        <div class="wSaTQd"></div>
-        <div class="PHBdkd">
-          <div class="DWPxHb" style="max-height: 144px;">
-             <span>
-               <div jsname="sngebd" [innerHTML]="ApplicationData.description"></div>
-             </span>
-            <div jsname="WgKync" class="uwAgLc f3Fr9d qAWA2"></div>
+          <!--additional start-->
+          <div class="W4P4ne ">
+            <div class="wSaTQd">
+              <h2 class="Rm6Gwb">Additional Information</h2>
+            </div>
+            <div class="JHTxhe IQ1z0d">
+              <div class="IxB2fe">
+                <div *ngFor="let metaDat of ApplicationData.metaData" class="hAyfc">
+                  <div class="BgcNfc" *ngFor="let item of metaDat | keyvalue" >{{item.key}}</div>
+                  <span class="htlgb">
+                   <div class="IQ1z0d">
+                     <span class="htlgb" *ngFor="let item of metaDat | keyvalue" [innerHTML]="item.value"></span>
+                   </div>
+                 </span>
+                </div>
+              </div>
+            </div>
           </div>
+          <!--additional end-->
+
+          <div class="Njo8s"></div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <div class="llhEMd bYEzqc LAhoGb iWO5td" *ngIf="showImage">
   <div class="mjANdc eEPege">
@@ -127,3 +146,4 @@
     background: transparent; /* make scrollbar transparent */
   }
 </style>
+
